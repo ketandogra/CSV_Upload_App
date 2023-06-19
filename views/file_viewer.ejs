@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="../css/file_viewer.css" />
+
+<div>
+  <div class="sub-title"><h2>CSV Viewer</h2></div>
+  <div class="file-name"><%= fileName%></div>
+</div>
+
+<!-- search bar -->
+<div class="search-bar">
+  <form id="searchForm">
+    <input type="text" id="search-input" placeholder="Search data...." />
+    <button type="button" id="search" class="search-btn">Search</button>
+  </form>
+</div>
+
+<div class="count-div">
+  <div>Result Found:<span id="count">0</span></div>
+  <div id="total-row">
+    <p>Total Rows: <%= length%></p>
+  </div>
+</div>
+<div class="file-data">
+  <table class="file-data-table">
+    <thead >
+      <tr class="table-head">
+        <% for(let head of headers){%>
+        <th><%= head %></th>
+        <%}%>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let row of data){%>
+      <tr class="table-row">
+        <% for(let key of Object.keys(row)) { %>
+        <td><%= row[key] %></td>
+
+        <%}%>
+      </tr>
+      <%}%>
+    </tbody>
+  </table>
+</div>

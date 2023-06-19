@@ -1,0 +1,14 @@
+a.nav-link {
+  font-size: 1.5rem;
+  font-family: inter;
+  font-weight: 600;
+  color: black;
+  padding: 20px 10px;
+
+}
+a.nav-link i {
+  margin-right: 5px;
+}
+ul {
+  width: 80vw;
+}

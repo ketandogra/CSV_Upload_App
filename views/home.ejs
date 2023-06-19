@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/home.css" />
+
+<div id="home-div">
+  <div class="heading-div">
+    <h1 class="heading">View CSV online</h1>
+    <p class="sub-title">
+      Open and view CSV files online with free CSV viewer.
+    </p>
+  </div>
+
+  <!-- upload box -->
+  <div class="upload-div">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="input-container">
+        <div>
+          <input type="file" id="csvFile" name="csvFile" accept=".csv" />
+        </div>
+
+        <div><button class="btn btn-primary">Upload file</button></div>
+
+        <div>
+          <label id="UploadTip" for="csvFile">or drag it in this box</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- show uploaded files -->
+
+  <div class="files-list">
+    <div class="list-center-text">
+      <h2>Uploaded Files</h2>
+    </div>
+
+    <% if(files.length==0) {%>
+    <div class="no-file">No files to show</div>
+
+    <%}else{%>
+
+    <table class="files-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time(UTC)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let file of files){%>
+        <tr>
+          <td class="uploaded-file">
+            <div><%= file.fileName%></div>
+
+            <div>
+              <a href="/view/<%=file._id%>" class="view-link"
+                ><i class="fa-solid fa-eye"></i></a
+              ><a href="/delete/<%=file._id%>" class="delete-link">
+                <i class="fa-solid fa-trash"></i>
+              </a>
+            </div>
+          </td>
+          <td><%= file.createdAt.toLocaleDateString()%></td>
+          <td><%= file.createdAt.toLocaleTimeString()%></td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+
+    <%}%>
+  </div>
+</div>

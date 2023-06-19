@@ -1,0 +1,80 @@
+.sub-title h2 {
+  font-weight: bolder;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+}
+.file-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin: 50px 0 10px 0;
+}
+#searchForm input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  width: 350px;
+  margin-top: 10px;
+  background: rgb(237, 233, 233);
+  border: none;
+}
+
+.search-btn {
+  margin-left: 10px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background-color: black;
+  color: #fff;
+}
+.search-btn:hover {
+  transform: scale(120%);
+  transition: 0.2s ease-in-out;
+}
+
+.file-data {
+  padding: 10px 90px 25px;
+}
+#total-row {
+  margin: 0 10px 0 0;
+}
+
+.file-data-table {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.file-data-table thead {
+  background-color: black;
+  color: #fff;
+}
+.file-data-table thead tr th {
+  padding: 10px 20px;
+  box-shadow: #fdfbfbe1 0px 1px 3px 0px,
+    rgba(242, 244, 245, 0.15) 0px 0px 0px 1px;
+}
+
+.table-row {
+  background: rgb(237, 233, 233);
+}
+
+.table-row td {
+  padding: 3px 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.count-div {
+  width: 100%;
+  padding: 30px 110px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.table-head {
+  position: sticky;
+  top: 0px;
+  background-color: black;
+}
+.highlight {
+  background-color: rgb(232, 232, 46) !important;
+}
