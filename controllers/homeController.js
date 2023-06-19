@@ -9,6 +9,6 @@ module.exports.homePage = async function (req, res) {
       title: "Home",
     });
   } catch (error) {
-    console.log("Error while rendering home page:", err);
+    console.log("Error while rendering home page:", error);
   }
 };
