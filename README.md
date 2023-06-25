@@ -12,7 +12,7 @@ To install GROUPCSV, please follow these steps:
 
 Clone this repository using the following command:
 
-$ git clone https://github.com/agentgrey/CSV_Upload.git
+$ git clone https://github.com/ketandogra/CSV_Upload_App.git
 
 Install the required dependencies using the following command:
 
